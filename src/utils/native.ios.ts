@@ -13,7 +13,8 @@ export async function share(text: string) {
   try {
     await Share.share({ message: text });
     return true;
-  } catch (e) {
+  } catch {
+    // intentionally ignore share errors
     return false;
   }
 }

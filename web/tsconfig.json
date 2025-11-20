@@ -1,8 +1,9 @@
 {
   "extends": "../tsconfig.json",
   "compilerOptions": {
-    "jsx": "react-jsx",
-    "types": ["vite/client"]
+    "jsx": "react-jsx", // Ensure JSX support is asserted
+    "types": ["vite/client"], // Ensure types are correctly set
+    "lib": ["ES2017", "DOM"]
   },
   "include": ["./**/*.ts", "./**/*.tsx", "../src/**/*", "../App.tsx"],
   "exclude": ["../android", "../ios", "../__tests__"]
