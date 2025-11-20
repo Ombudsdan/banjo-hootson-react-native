@@ -27,7 +27,6 @@ export default function HomeScreen() {
     >
       <HomeHeader />
       <ScrollView contentContainerStyle={styles.scrollContent}>
-        <Text>Welcome to the Home Screen!</Text>
         <CommunitySection />
         <GallerySection />
         <SocialSection />

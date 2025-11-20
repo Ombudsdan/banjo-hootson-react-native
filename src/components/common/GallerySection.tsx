@@ -4,6 +4,7 @@ import imgConnect1 from '../../assets/images/home-connect-1.jpg';
 import imgConnect2 from '../../assets/images/home-connect-2.jpg';
 import imgConnect3 from '../../assets/images/home-connect-3.jpg';
 import imgConnect4 from '../../assets/images/home-connect-4.jpg';
+import Heading from '../ui/Heading/Heading';
 
 // Simple gallery roughly mirroring web GalleryController.homeItems.
 const mockGalleryItems = [
@@ -32,9 +33,7 @@ const mockGalleryItems = [
 export default function GallerySection() {
   return (
     <View style={styles.section}>
-      <Text style={styles.heading}>
-        Exploring the plushie world is my passion...
-      </Text>
+      <Heading level={2}>Exploring the plushie world is my passion...</Heading>
       <FlatList
         data={mockGalleryItems}
         keyExtractor={item => item.id}
@@ -48,7 +47,6 @@ export default function GallerySection() {
               style={styles.image}
               resizeMode="cover"
             />
-            <Text style={styles.caption}>{item.title}</Text>
           </View>
         )}
       />
@@ -72,10 +70,10 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     overflow: 'hidden',
     backgroundColor: '#020617',
+    aspectRatio: 1 / 1,
   },
   image: {
     width: '100%',
-    height: 110,
   },
   caption: {
     paddingHorizontal: 8,
