@@ -1,11 +1,12 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import ClickablePanelRow from './ClickablePanelRow';
+import Heading from '../ui/Heading/Heading';
 
 export default function CommunitySection() {
   return (
     <View style={styles.section}>
-      <Text style={styles.heading}>Plushie Community</Text>
+      <Heading level={2}>Plushie Community</Heading>
       <ClickablePanelRow groupKey="community-links" />
     </View>
   );

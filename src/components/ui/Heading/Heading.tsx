@@ -4,24 +4,29 @@ import { HeadingLevel, HeadingProps } from './Heading.config';
 import { headingStyles } from './Heading.styles';
 
 export const Heading = forwardRef<Text, HeadingProps>((props, ref) => {
-  const { level, children, ...extraProps } = props;
-
-  const styles = buildStyles(level);
+  const styles = buildStyles(props);
 
   return (
     <Text
-      {...extraProps}
+      {...props}
       accessibilityRole="header"
       ref={ref}
       style={styles.heading}
     >
-      {children}
+      {props.children}
     </Text>
   );
 });
 
 export default Heading;
 
-function buildStyles(level: HeadingLevel) {
-  return { heading: headingStyles[level] };
+function buildStyles(props: HeadingProps) {
+  const level: HeadingLevel = props.level || 1;
+
+  return {
+    heading: {
+      ...headingStyles[level],
+      textAlign: props.textAlign || 'center',
+    },
+  };
 }

@@ -1,11 +1,12 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import ClickablePanelRow from './ClickablePanelRow';
+import Heading from '../ui/Heading/Heading';
 
 export default function SocialSection() {
   return (
     <View style={styles.section}>
-      <Text style={styles.heading}>Come join me on my adventures!</Text>
+      <Heading level={2}>Come join me on my adventures!</Heading>
       <ClickablePanelRow groupKey="social-links" />
     </View>
   );
