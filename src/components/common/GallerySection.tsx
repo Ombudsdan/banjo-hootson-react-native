@@ -1,10 +1,11 @@
 import React from 'react';
-import { FlatList, Image, StyleSheet, Text, View } from 'react-native';
-import imgConnect1 from '../../assets/images/home-connect-1.jpg';
-import imgConnect2 from '../../assets/images/home-connect-2.jpg';
-import imgConnect3 from '../../assets/images/home-connect-3.jpg';
-import imgConnect4 from '../../assets/images/home-connect-4.jpg';
-import Heading from '../ui/Heading/Heading';
+import { FlatList, Image, StyleSheet, View } from 'react-native';
+
+import imgConnect1 from 'assets/images/home-connect-1.jpg';
+import imgConnect2 from 'assets/images/home-connect-2.jpg';
+import imgConnect3 from 'assets/images/home-connect-3.jpg';
+import imgConnect4 from 'assets/images/home-connect-4.jpg';
+import { Heading } from 'components/ui/Heading';
 
 // Simple gallery roughly mirroring web GalleryController.homeItems.
 const mockGalleryItems = [

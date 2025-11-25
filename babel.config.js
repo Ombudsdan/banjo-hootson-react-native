@@ -14,6 +14,7 @@ module.exports = {
           styles: './src/styles',
           services: './src/services',
           utils: './src/utils',
+          types: './src/types',
           '@': './src',
         },
         extensions: [

@@ -1,7 +1,9 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
+
+import { Heading } from 'components/ui/Heading';
+
 import ClickablePanelRow from './ClickablePanelRow';
-import Heading from '../ui/Heading/Heading';
 
 export default function CommunitySection() {
   return (

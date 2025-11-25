@@ -1,7 +1,8 @@
 import { StyleSheet, TextStyle } from 'react-native';
+
+import { HeadingLevel } from 'components/ui/Heading';
 import { fontFamilyStyles } from 'styles/typography';
 import { fontSize, lineHeight } from 'styles/variables';
-import { HeadingLevel } from './Heading.config';
 
 const HEADING_LEVELS = [1, 2, 3, 4, 5, 6] as HeadingLevel[];
 

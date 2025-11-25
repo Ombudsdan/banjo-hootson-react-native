@@ -1,5 +1,5 @@
 import { TextProps, TextStyle } from 'react-native';
-import { CommonComponentProps } from '../../../types/react-native';
+import { CommonComponentProps } from 'types/react-native';
 
 export type HeadingLevel = 1 | 2 | 3 | 4 | 5 | 6;
 

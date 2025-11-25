@@ -1,5 +1,6 @@
 import { forwardRef } from 'react';
 import { Text } from 'react-native';
+
 import { HeadingLevel, HeadingProps, headingStyles } from '.';
 
 export const Heading = forwardRef<Text, HeadingProps>((props, ref) => {

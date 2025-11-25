@@ -1,7 +1,8 @@
 import { StyleSheet, Text, View } from 'react-native';
-import { colourUsage } from 'styles/variables';
+
 import { Heading } from 'components/ui/Heading';
 import { fontFamilyStyles } from 'styles/typography';
+import { colourUsage } from 'styles/variables';
 
 export default function PageHeadingText() {
   return (

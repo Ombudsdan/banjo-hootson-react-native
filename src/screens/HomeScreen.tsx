@@ -1,10 +1,13 @@
 import React, { useMemo } from 'react';
-import { ScrollView, StyleSheet, View, Text, Dimensions } from 'react-native';
+import { ScrollView, StyleSheet, View, Dimensions } from 'react-native';
 import { useColorScheme } from 'react-native';
-import HomeHeader from '../components/layout/HomeHeader';
-import CommunitySection from '../components/common/CommunitySection';
-import GallerySection from '../components/common/GallerySection';
-import SocialSection from '../components/common/SocialSection';
+
+import {
+  CommunitySection,
+  GallerySection,
+  SocialSection,
+} from 'components/common';
+import { HomeHeader } from 'components/layout';
 
 const { height: windowHeight } = Dimensions.get('window');
 

@@ -1,9 +1,11 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import homeHeadingImage from '../../assets/images/home-heading-image.jpg';
-import { colourUsage } from 'styles/variables';
-import PageHeadingText from './PageHeadingText';
+
+import homeHeadingImage from 'assets/images/home-heading-image.jpg';
 import { MyImage } from 'components/ui';
+import { colourUsage } from 'styles/variables';
+
+import PageHeadingText from './PageHeadingText';
 
 export default function HomeHeader() {
   return (

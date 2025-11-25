@@ -1,5 +1,7 @@
 import { View, Image, StyleSheet } from 'react-native';
-import { IMyImage } from './Image.config';
+
+import type { IMyImage } from 'components/ui/Image';
+
 import { buildImageContainerStyles, buildImageStyles } from './Image.styles';
 
 export default function MyImage(props: IMyImage) {

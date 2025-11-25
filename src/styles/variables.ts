@@ -1,5 +1,6 @@
 import { TextStyle } from 'react-native';
-import { BreakpointKeys } from '../components/layout/Layout.config';
+
+import { BreakpointKeys } from 'components/layout/Layout.config';
 
 export const fontWeight: Record<string, FontWeight> = {
   thin: '100',

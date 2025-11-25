@@ -1,5 +1,6 @@
-import { ColorValue, ImageStyle, StyleSheet, ViewStyle } from 'react-native';
-import { ImageDimensions, IMyImage } from './Image.config';
+import { ColorValue, ImageStyle, ViewStyle } from 'react-native';
+
+import type { ImageDimensions, IMyImage } from 'components/ui/Image';
 import { colour } from 'styles/variables';
 
 export function buildImageStyles(): ImageStyle {
