@@ -1,4 +1,4 @@
-export { default as MyImage } from './Image';
+export { default as Image } from './Image';
 export * from './Image';
 
 export * from './Image.config';

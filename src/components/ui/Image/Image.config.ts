@@ -5,7 +5,7 @@ type ImageUsageType = 'heading' | 'gallery' | 'bio';
 type ImageShapeType = 'circle' | 'rounded-square';
 type ImageFrameType = 'light' | 'dark';
 
-export interface IMyImage {
+export interface IImage {
   source: ImageSource;
   usage?: ImageUsageType;
   shape?: ImageShapeType;

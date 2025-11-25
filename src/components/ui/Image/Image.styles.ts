@@ -1,6 +1,6 @@
 import { ColorValue, ImageStyle, ViewStyle } from 'react-native';
 
-import type { ImageDimensions, IMyImage } from 'components/ui/Image';
+import type { ImageDimensions, IImage } from 'components/ui/Image';
 import { colour } from 'styles/variables';
 
 export function buildImageStyles(): ImageStyle {
@@ -10,7 +10,7 @@ export function buildImageStyles(): ImageStyle {
   };
 }
 
-export function buildImageContainerStyles(props: IMyImage): ViewStyle {
+export function buildImageContainerStyles(props: IImage): ViewStyle {
   const frame = setFrame(props);
   const dimensions = setDimensions(props.usage);
   const shape = setShape(props);
@@ -24,9 +24,9 @@ export function buildImageContainerStyles(props: IMyImage): ViewStyle {
   };
 }
 
-function setShape(props: IMyImage) {
+function setShape(props: IImage) {
   if (!props.usage && !props.shape) return undefined;
-  let shape: IMyImage['shape'];
+  let shape: IImage['shape'];
 
   if (props.shape) shape = props.shape;
   else shape = inferShapeFromUsage(props);
@@ -36,7 +36,7 @@ function setShape(props: IMyImage) {
   };
 }
 
-function inferShapeFromUsage(props: IMyImage) {
+function inferShapeFromUsage(props: IImage) {
   switch (props.usage) {
     case 'heading':
       return 'circle';
@@ -48,9 +48,9 @@ function inferShapeFromUsage(props: IMyImage) {
   }
 }
 
-function setFrame(props: IMyImage) {
+function setFrame(props: IImage) {
   if (!props.frame && !props.usage) return undefined;
-  let frame: IMyImage['frame'];
+  let frame: IImage['frame'];
 
   if (props.frame) frame = props.frame;
   else if (props.usage === 'heading') frame = 'dark';
@@ -63,14 +63,14 @@ function setFrame(props: IMyImage) {
   };
 }
 
-function setBorderRadius(shape: IMyImage['shape']) {
+function setBorderRadius(shape: IImage['shape']) {
   if (!shape) return 0;
   if (shape === 'circle') return 9999;
   if (shape === 'rounded-square') return 16;
   return 0;
 }
 
-function setFrameColours(frame: IMyImage['frame']) {
+function setFrameColours(frame: IImage['frame']) {
   let outerRingColour: ColorValue;
   const innerRingColour: ColorValue = colour.white;
 
@@ -86,7 +86,7 @@ function setFrameColours(frame: IMyImage['frame']) {
   };
 }
 
-function setDimensions(usage: IMyImage['usage']): ImageDimensions {
+function setDimensions(usage: IImage['usage']): ImageDimensions {
   switch (usage) {
     case 'heading':
       return { width: 150, height: 150 };
