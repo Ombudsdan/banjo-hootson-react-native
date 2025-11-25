@@ -1,7 +1,7 @@
 import { StyleSheet, TextStyle } from 'react-native';
 
 import { HeadingLevel } from 'components/ui/Heading';
-import { fontFamilyStyles } from 'styles/typography';
+import { fontUsage } from 'styles/typography';
 import { fontSize, lineHeight } from 'styles/variables';
 
 const HEADING_LEVELS = [1, 2, 3, 4, 5, 6] as HeadingLevel[];
@@ -14,7 +14,7 @@ function generateHeadingStyles(): HeadingStyles {
   return HEADING_LEVELS.reduce((acc, level) => {
     const headingLevel = `h${level}` as keyof typeof fontSize;
     acc[level] = {
-      ...fontFamilyStyles.coiny_regular,
+      ...fontUsage.heading,
       fontSize: fontSize[headingLevel],
       lineHeight: fontSize[headingLevel] * lineHeight,
     };

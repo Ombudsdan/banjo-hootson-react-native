@@ -15,7 +15,8 @@
     "web:dev": "vite",
     "web:build": "vite build",
     "web:preview": "vite preview",
-    "gradlew:clean": "ts-node ./scripts/gradlew-clean.ts"
+    "gradlew:clean": "ts-node ./scripts/gradlew-clean.ts",
+    "fonts:sync": "node ./scripts/copy-fonts.js"
   },
   "dependencies": {
     "@react-native/new-app-screen": "0.82.1",

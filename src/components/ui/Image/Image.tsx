@@ -1,4 +1,5 @@
 import { View, Image as NativeImage, StyleSheet } from 'react-native';
+
 import {
   buildImageContainerStyles,
   buildImageStyles,

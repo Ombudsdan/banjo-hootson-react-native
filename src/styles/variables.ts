@@ -32,8 +32,24 @@ export const fontSize: Record<string, FontSize> = {
 };
 
 export const fontFamily: Record<string, FontFamily> = {
-  coiny: 'Coiny',
-  poppins: 'Poppins',
+  poppinsThin: 'Poppins-Thin',
+  poppinsExtraLight: 'Poppins-ExtraLight',
+  poppinsLight: 'Poppins-Light',
+  poppinsRegular: 'Poppins-Regular',
+  poppinsMedium: 'Poppins-Medium',
+  poppinsSemiBold: 'Poppins-SemiBold',
+  poppinsBold: 'Poppins-Bold',
+  poppinsExtraBold: 'Poppins-ExtraBold',
+  poppinsBlack: 'Poppins-Black',
+  poppinsThinItalic: 'Poppins-ThinItalic',
+  poppinsExtraLightItalic: 'Poppins-ExtraLightItalic',
+  poppinsLightItalic: 'Poppins-LightItalic',
+  poppinsItalic: 'Poppins-Italic',
+  poppinsMediumItalic: 'Poppins-MediumItalic',
+  poppinsSemiBoldItalic: 'Poppins-SemiBoldItalic',
+  poppinsBoldItalic: 'Poppins-BoldItalic',
+  poppinsExtraBoldItalic: 'Poppins-ExtraBoldItalic',
+  poppinsBlackItalic: 'Poppins-BlackItalic',
 };
 
 export const colour: Record<string, Colour> = {

@@ -1,41 +1,58 @@
 import { fontFamily, fontStyle, fontWeight } from './variables';
 
-const coinyBaseStyles = {
-  regular: { fontFamily: fontFamily.coiny },
-} as const;
-
 const poppinsBaseStyles = {
-  thin: { fontFamily: fontFamily.poppins, fontWeight: fontWeight.thin },
-  extraLight: {
-    fontFamily: fontFamily.poppins,
-    fontWeight: fontWeight.extraLight,
-  },
-  light: { fontFamily: fontFamily.poppins, fontWeight: fontWeight.light },
-  regular: { fontFamily: fontFamily.poppins, fontWeight: fontWeight.regular },
-  medium: { fontFamily: fontFamily.poppins, fontWeight: fontWeight.medium },
-  semiBold: { fontFamily: fontFamily.poppins, fontWeight: fontWeight.semiBold },
-  bold: { fontFamily: fontFamily.poppins, fontWeight: fontWeight.bold },
-  extraBold: {
-    fontFamily: fontFamily.poppins,
-    fontWeight: fontWeight.extraBold,
-  },
-  black: { fontFamily: fontFamily.poppins, fontWeight: fontWeight.black },
+  thin: { fontFamily: fontFamily.poppinsThin },
+  extraLight: { fontFamily: fontFamily.poppinsExtraLight },
+  light: { fontFamily: fontFamily.poppinsLight },
+  regular: { fontFamily: fontFamily.poppinsRegular },
+  medium: { fontFamily: fontFamily.poppinsMedium },
+  semiBold: { fontFamily: fontFamily.poppinsSemiBold },
+  bold: { fontFamily: fontFamily.poppinsBold },
+  extraBold: { fontFamily: fontFamily.poppinsExtraBold },
+  black: { fontFamily: fontFamily.poppinsBlack },
 } as const;
 
 const poppinsItalicStyles = {
-  thin: combineItalic('thin'),
-  regular: combineItalic('regular'),
-  medium: combineItalic('medium'),
-  semiBold: combineItalic('semiBold'),
-  bold: combineItalic('bold'),
-  extraBold: combineItalic('extraBold'),
-  black: combineItalic('black'),
+  thin: {
+    fontFamily: fontFamily.poppinsThinItalic,
+  },
+  extraLight: {
+    fontFamily: fontFamily.poppinsExtraLightItalic,
+  },
+  light: {
+    fontFamily: fontFamily.poppinsLightItalic,
+  },
+  regular: {
+    fontFamily: fontFamily.poppinsItalic,
+  },
+  medium: {
+    fontFamily: fontFamily.poppinsMediumItalic,
+  },
+  semiBold: {
+    fontFamily: fontFamily.poppinsSemiBoldItalic,
+  },
+  bold: {
+    fontFamily: fontFamily.poppinsBoldItalic,
+  },
+  extraBold: {
+    fontFamily: fontFamily.poppinsExtraBoldItalic,
+  },
+  black: {
+    fontFamily: fontFamily.poppinsBlackItalic,
+    fontStyle: fontStyle.italic,
+  },
 } as const;
 
 export const fontFamilyStyles = {
-  ...buildStyles('coiny', coinyBaseStyles),
   ...buildStyles('poppins', poppinsBaseStyles),
   ...buildStyles('poppins', poppinsItalicStyles, fontStyle.italic),
+} as const;
+
+export const fontUsage = {
+  heading: fontFamilyStyles.poppins_bold,
+  subHeading: fontFamilyStyles.poppins_bold,
+  body: fontFamilyStyles.poppins_regular,
+  emphasis: fontFamilyStyles.poppins_regular_italic,
 } as const;
 
 function buildStyles<
@@ -51,18 +68,6 @@ function buildStyles<
     acc[newKey] = value as StyleProperty<S>;
     return acc;
   }, {} as MakeFontStyles<F, S, M>);
-}
-
-function combineItalic(style: keyof typeof poppinsBaseStyles) {
-  const baseStyle = poppinsBaseStyles[style];
-  const exemptions = ['extraLight', 'light'];
-
-  if (!baseStyle || exemptions.includes(style)) return {};
-
-  return {
-    ...baseStyle,
-    fontStyle: fontStyle.italic,
-  };
 }
 
 type Styles = Record<string, object>;

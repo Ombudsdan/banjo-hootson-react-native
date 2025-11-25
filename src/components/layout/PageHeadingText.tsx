@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View } from 'react-native';
 
 import { Heading } from 'components/ui/Heading';
-import { fontFamilyStyles } from 'styles/typography';
+import { fontUsage } from 'styles/typography';
 import { colourUsage } from 'styles/variables';
 
 export default function PageHeadingText() {
@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
   },
   subtitle: {
     color: colourUsage.heroText,
-    ...fontFamilyStyles.poppins_bold,
+    ...fontUsage.subHeading,
     textAlign: 'center',
     fontSize: 14,
   },
