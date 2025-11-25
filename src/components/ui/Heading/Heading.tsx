@@ -1,7 +1,6 @@
 import { forwardRef } from 'react';
 import { Text } from 'react-native';
-import { HeadingLevel, HeadingProps } from './Heading.config';
-import { headingStyles } from './Heading.styles';
+import { HeadingLevel, HeadingProps, headingStyles } from '.';
 
 export const Heading = forwardRef<Text, HeadingProps>((props, ref) => {
   const styles = buildStyles(props);
@@ -23,10 +22,13 @@ export default Heading;
 function buildStyles(props: HeadingProps) {
   const level: HeadingLevel = props.level || 1;
 
+  console.log(props.styles);
+
   return {
     heading: {
       ...headingStyles[level],
       textAlign: props.textAlign || 'center',
+      ...(props.styles || {}),
     },
   };
 }

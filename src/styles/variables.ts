@@ -67,6 +67,13 @@ export const colour: Record<string, Colour> = {
   facebook: 'rgb(60, 93, 159)',
 };
 
+export const colourUsage: Record<string, Colour> = {
+  background: colour.veryLight,
+  text: colour.black,
+  heroBackground: colour.brown,
+  heroText: colour.white,
+};
+
 export const buttonColours: Record<string, Colour> = {
   buttonPrimary: colour.orange,
   buttonPrimaryText: colour.white,

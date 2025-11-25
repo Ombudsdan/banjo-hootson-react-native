@@ -1,6 +1,6 @@
 import React from 'react';
 import { Linking, Pressable, StyleSheet, Text, View } from 'react-native';
-import { PANEL_GROUPS, PanelGroupId } from '../../config/clickablePanels';
+import { PANEL_GROUPS, PanelGroupId } from 'config/ClickablePanels';
 
 export default function ClickablePanelRow({
   groupKey,
