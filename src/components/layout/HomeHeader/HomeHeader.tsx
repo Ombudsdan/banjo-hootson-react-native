@@ -4,14 +4,13 @@ import { StyleSheet, View } from 'react-native';
 import homeHeadingImage from 'assets/images/home-heading-image.jpg';
 import { Image } from 'components/ui';
 import { colourUsage } from 'styles/variables';
-
-import PageHeadingText from './PageHeadingText';
+import { PageHeading } from 'components/common';
 
 export default function HomeHeader() {
   return (
     <View style={styles.header}>
       <Image source={homeHeadingImage} usage="heading" />
-      <PageHeadingText />
+      <PageHeading />
     </View>
   );
 }

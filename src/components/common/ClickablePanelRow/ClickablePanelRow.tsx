@@ -1,16 +1,16 @@
 import React from 'react';
 import { Linking, Pressable, StyleSheet, Text, View } from 'react-native';
 
-import { PANEL_GROUPS, PanelGroupId } from 'config/ClickablePanels';
+import {
+  getClickablePanelLinks,
+  IClickablePanelRow,
+} from 'components/common/ClickablePanelRow';
 
-export default function ClickablePanelRow({
-  groupKey,
-}: {
-  groupKey: PanelGroupId | string;
-}) {
-  const links = PANEL_GROUPS[groupKey as PanelGroupId] ?? [];
+export default function ClickablePanelRow(props: IClickablePanelRow) {
+  const { groupKey } = props;
+  const links = getClickablePanelLinks(groupKey);
 
-  if (!links.length) return null;
+  if (!links) return null;
 
   return (
     <View style={styles.row}>

@@ -2,8 +2,7 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 
 import { Heading } from 'components/ui/Heading';
-
-import ClickablePanelRow from './ClickablePanelRow';
+import { ClickablePanelRow } from 'components/common/ClickablePanelRow';
 
 export default function SocialSection() {
   return (

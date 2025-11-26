@@ -4,7 +4,7 @@ import { Heading } from 'components/ui/Heading';
 import { fontUsage } from 'styles/typography';
 import { colourUsage } from 'styles/variables';
 
-export default function PageHeadingText() {
+export default function PageHeading() {
   return (
     <View style={styles.headingWrap}>
       <Heading level={1} styles={styles.title}>
