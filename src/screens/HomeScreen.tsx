@@ -8,6 +8,7 @@ import {
   SocialSection,
 } from 'components/common';
 import { HomeHeader } from 'components/layout';
+import { Icon } from 'components/ui';
 
 const { height: windowHeight } = Dimensions.get('window');
 
@@ -29,6 +30,7 @@ export default function HomeScreen() {
       ]}
     >
       <HomeHeader />
+      <Icon name="coffee" webStyle={{ color: 'white' }} />
       <ScrollView contentContainerStyle={styles.scrollContent}>
         <CommunitySection />
         <GallerySection />
